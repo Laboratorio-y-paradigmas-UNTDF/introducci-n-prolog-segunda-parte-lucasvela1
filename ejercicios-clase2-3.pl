@@ -88,7 +88,7 @@ son_identicos(X, Y) :- X == Y.
 % ============================================================
 
 % COMPLETAR: descomponer(T, L) :- ???
-descomponer(T, L) :- L =.. T.
+descomponer(T, L) :- T =.. L.
 %Aqui los .. es un operador que descompone el término T en una lista L, 
 %donde el primer elemento de la lista es el functor del término y los siguientes 
 %elementos son los argumentos del término. Por ejemplo, si T es punto(3,4), 
@@ -206,7 +206,7 @@ maximo(X, Y, Y) :- X < Y. %X podría ser _ porque el corte ya garantiza que no s
 % ============================================================
 
 % COMPLETAR: valor_absoluto/2
-valor_absoluto(X, X) :- X >= 0, A is X, !.
+valor_absoluto(X, A) :- X >= 0, !, A is X.
 valor_absoluto(X, A) :- X < 0, A is -X.
 
 
